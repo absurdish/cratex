@@ -1,0 +1,15 @@
+[package]
+name = "cratex"
+version = "0.1.0"
+edition = "2021"
+description = "execute crates directly"
+license = "MIT"
+
+
+[dependencies]
+indicatif = "0.17.9"
+tempfile = "3.15.0"
+
+[[bin]]
+name = "cratex"
+path = "src/main.rs"
