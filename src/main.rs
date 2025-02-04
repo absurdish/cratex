@@ -1,11 +1,23 @@
+use beautify::Colors;
 use std::env;
 use std::process;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    
+
     if args.len() < 2 {
-        eprintln!("Usage: cratex <crate-name>[@version] [args...]");
+        println!(
+            "{} {}",
+            "cratex".text_gradient(&["#02f9d8", "#3e8eef"]),
+            "v0.2.0".text_blue()
+        );
+        eprintln!(
+            "{}{}{}{}",
+            "usage: ".text_red(),
+            "cratex ".text_green(),
+            "<crate-name>".text_yellow(),
+            "[@version] [args...]".text_blue()
+        );
         process::exit(1);
     }
 
